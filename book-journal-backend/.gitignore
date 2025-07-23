@@ -1,0 +1,73 @@
+# ================================================================= #
+# Arquivo .gitignore para um projeto NestJS                         #
+# ================================================================= #
+
+# Dependências e Módulos
+# A pasta node_modules contém todas as dependências do projeto.
+# Ela é recriada com 'npm install' ou 'yarn install', então nunca deve ser versionada.
+node_modules
+
+# Arquivos de Log
+# Logs gerados durante a execução ou em caso de erros.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Arquivos de Variáveis de Ambiente
+# EXTREMAMENTE IMPORTANTE: Contém segredos como senhas de banco de dados e chaves de API.
+# Nunca envie este arquivo para o repositório. Crie um arquivo .env.example sem os segredos.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Pasta de Build
+# Contém o código JavaScript transpilado pronto para produção.
+# É gerada pelo comando 'npm run build'.
+/dist
+
+# Arquivos de Cache
+# Caches de ferramentas como ESLint ou Jest.
+.eslintcache
+.cache
+.npm
+.yarn-cache
+
+# Arquivos de Cobertura de Testes
+# Relatórios gerados ao rodar testes com a flag de cobertura.
+/coverage
+.nyc_output
+
+# Arquivos de Sistema Operacional
+# Arquivos gerados por diferentes sistemas operacionais.
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDEs e Editores de Código
+# Configurações específicas do ambiente de desenvolvimento de cada pessoa.
+.idea/           # JetBrains (WebStorm, IntelliJ)
+.vscode/         # Visual Studio Code (exceto arquivos de configuração compartilhados)
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de Lock de Dependências (Opcional, mas recomendado versionar)
+# Se você quiser garantir que todos na equipe usem a mesma versão das dependências,
+# MANTENHA os arquivos de lock (package-lock.json, yarn.lock, pnpm-lock.yaml).
+# Se, por algum motivo, você não quiser versioná-los, descomente a linha abaixo.
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Arquivos de Log do PM2 (se você usar)
+/logs
+/pids
+
+# Fim do arquivo .gitignore
